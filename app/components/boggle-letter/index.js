@@ -1,5 +1,6 @@
 require.config({
   paths: {
+    
   }
 });
 
@@ -21,5 +22,7 @@ define([
     $css.bind({
       href: 'app/components/boggle-letter/index.css'
     }, $scope);
+
+    this.letter = String.fromCharCode(97 + Math.floor(Math.random() * 26));
   });
 });

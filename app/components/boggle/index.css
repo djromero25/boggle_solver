@@ -1,0 +1,30 @@
+#boggle {
+  /*width: 20rem;*/
+  /*height: 20rem;*/
+  border: 1px blue solid;
+  display: inline-block;
+}
+
+#boggle ul {
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#boggle ul li {
+  display: inline-block;
+  margin: .5rem;
+}
+
+#boggle ul li .boggle-letter {
+  width: 5rem;
+  height: 5rem;
+}
+
+#boggle ul li .boggle-letter input {
+  width: 100%;
+  height: 100%;
+  font-size: 72px;
+  text-align: center;
+}
