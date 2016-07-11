@@ -27,7 +27,6 @@ define([
 
     $http.get('/assets/english-words.json.txt').success(function(res) {
       _this.allWords = res;
-      console.log(res);
     });
 
     $rootScope.$on('boggle:solve', function(e, data) {
@@ -35,7 +34,6 @@ define([
     });
 
     function makeBoard(letters) {
-      console.log(letters.join(''))
       var board = [];
       for (var i = 0; i < squareLength; i++) {
         board.push([]);
@@ -43,7 +41,6 @@ define([
           board[i].push(letters[i * squareLength + j]);
         }
       }
-      console.log(letters, board)
       return board;
     }
 
@@ -82,7 +79,6 @@ define([
           }
         }
       }
-      if (inBoggle && lastLetterRow === undefined) console.log(letter + word)
       return inBoggle;
     }
 
@@ -92,18 +88,17 @@ define([
       });
     }
 
+    function lowerCaseLetters(letters){
+      return letters.map(function(letter){
+        return letter.toLowerCase();
+      });
+    }
+
     function boggleSolve(letters) {
-      var start = new Date().getTime();
-      console.time('test')
+      letters = lowerCaseLetters(letters);
       _this.board = makeBoard(letters);
       var words = filterWords(letters);
       _this.words = wordsInBoggle(words);
-      console.timeEnd('test')
-      var end = new Date().getTime();
-      var time = end - start;
-
-
-      console.log('Execution time: ' + time);
     }
   });
 });
