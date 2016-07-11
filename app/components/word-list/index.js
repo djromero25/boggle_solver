@@ -21,9 +21,9 @@ define([
     }, $scope);
 
     var _this = this;
-    var squareLength = 4;
 
-    this.wordsData = {};
+    var squareLength = 4;
+    this.allWords = [];
 
     $http.get('/assets/english-words.json.txt').success(function(res) {
       _this.allWords = res;
