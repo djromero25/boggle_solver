@@ -1,5 +1,4 @@
 #boggle {
-  border: 1px blue solid;
   display: inline-block;
 }
 
@@ -25,4 +24,9 @@
   height: 100%;
   font-size: 72px;
   text-align: center;
+}
+
+#boggle button {
+  margin-top: .5em;
+  font-size: 3rem;
 }
