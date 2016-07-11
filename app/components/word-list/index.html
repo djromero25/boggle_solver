@@ -1,5 +1,5 @@
 <div id="word-list" ng-if="listCtrl.words">
-  <h2>Word List</h2>
+  <h2>Word List (total: {{listCtrl.words.length}})</h2>
   <ul>
     <li ng-repeat="word in listCtrl.words">
       <p>{{word}}</p>
