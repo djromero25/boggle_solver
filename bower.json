@@ -1,0 +1,27 @@
+{
+  "name": "boggle_solver",
+  "main": "index.html",
+  "authors": [
+    "Daniel Romero"
+  ],
+  "description": "a boggle solver",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-css": "~1.0.7",
+    "angular-material": "~1.0.1",
+    "angular-route": "~1.4.8",
+    "angularAMD": "~0.2.1"
+  },
+  "resolutions": {
+    "angular": "^1.4.8"
+  }
+}
